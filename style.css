@@ -1,0 +1,146 @@
+:root {
+    /* Primary */
+    --pale-blue: hsl(225, 100%, 94%);
+    --bright-blue: hsl(245, 75%, 52%);
+
+    /* Neutral */
+    --very-pale-blue: hsl(225, 100%, 98%);
+    --desaturated-blue: hsl(224, 23%, 55%);
+    --dark-blue: hsl(223, 47%, 23%);
+
+    /* Typography */
+    --default-size: 16px;
+    --red-hat-display: "Red Hat Display", sans-serif;
+}
+
+/* Desktop*/
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0px;
+    padding: 0px;
+    font-size: var(--default-size);
+    font-family: var(--red-hat-display);
+    color: var(--desaturated-blue);
+    background-image: url(images/pattern-background-desktop.svg);
+    background-repeat: no-repeat;
+    background-position: top;
+    background-color: var(--pale-blue);
+    height: 100vh;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 350px;
+    border-radius: 10px;
+}
+
+main img {
+    border-radius: 10px 10px 0 0;
+}
+
+.main-content {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 10px 30px 30px;
+    background-color: white;
+    border-radius: 0 0 10px 10px;
+}
+
+h1 {
+    margin: 0;
+    color: var(--dark-blue);
+    font-size: 24px;
+}
+
+p {
+    margin: 0;
+}
+
+.order-summary {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--very-pale-blue);
+    border-radius: 5px;
+    padding: 20px 15px;
+}
+
+.order-summary a {
+    font-weight: 700;
+    color: var(--bright-blue);
+}
+
+.order-summary a:hover {
+    opacity: 0.6;
+}
+
+.summary {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.price p {
+    margin: 0;
+}
+
+.price p:nth-child(1) {
+    font-weight: 700;
+    color: var(--dark-blue);
+}
+
+.proceed {
+    background-color: var(--bright-blue);
+    color: white;
+    border-color: transparent;
+    border-radius: 10px;
+    padding: 10px;
+    font-weight: 700;
+    font-family: var(--red-hat-display);
+    box-shadow: var(--bright-blue);
+    cursor: pointer;
+}
+
+.proceed:hover {
+    opacity: 0.6;
+}
+
+.cancel {
+    color: var(--desaturated-blue);
+    background-color: transparent;
+    border-color: transparent;
+    border-radius: 5px;
+    padding: 10px;
+    font-weight: 700;
+    font-family: var(--red-hat-display);
+}
+
+.cancel:hover {
+    cursor: pointer;
+    color: var(--dark-blue);
+}
+
+.attribution {
+    font-size: 12px;
+}
+
+/* Mobile */
+@media (max-width: 425px) {
+    body {
+        font-size: 14px;
+    }
+
+    main {
+        max-width: 300px;
+    }
+
+    main img {
+        max-width: 300px;
+    }
+}
